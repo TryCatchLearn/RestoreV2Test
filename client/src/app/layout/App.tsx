@@ -1,7 +1,7 @@
-import CatalogPage from "../../features/catalog/CatalogPage";
 import { Box, Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import NavBar from "./NavBar";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -33,7 +33,7 @@ function App() {
         }}
       >
         <Container maxWidth='xl' sx={{ mt: 8 }}>
-          <CatalogPage />
+          <Outlet />
         </Container>
       </Box>
 
