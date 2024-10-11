@@ -1,0 +1,83 @@
+"filename", "language", "JSON", "HTML", "C#", "XML", "TypeScript", "Database", "TypeScript JSX", "CSS", "JavaScript", "JSON with Comments", "Markdown", "comment", "blank", "total"
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/API.csproj", "XML", 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 4, 18
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Controllers/BaseApiController.cs", "C#", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 12
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Controllers/BasketController.cs", "C#", 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 81
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Controllers/BuggyController.cs", "C#", 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 41
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Controllers/ProductsController.cs", "C#", 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 50
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Controllers/WeatherForecastController.cs", "C#", 0, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 33
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/DTOs/BasketDto.cs", "C#", 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 12
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/DTOs/BasketItemDto.cs", "C#", 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 12
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/DbInitializer.cs", "C#", 0, 0, 219, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 229
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241009045439_InitialCreate.Designer.cs", "C#", 0, 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 2, 13, 62
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241009045439_InitialCreate.cs", "C#", 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 41
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241010050425_BasketEntityAdded.Designer.cs", "C#", 0, 0, 93, 0, 0, 0, 0, 0, 0, 0, 0, 2, 30, 125
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241010050425_BasketEntityAdded.cs", "C#", 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 3, 8, 75
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241010052235_BasketCorrections.Designer.cs", "C#", 0, 0, 97, 0, 0, 0, 0, 0, 0, 0, 0, 2, 32, 131
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241010052235_BasketCorrections.cs", "C#", 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 0, 3, 8, 49
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/StoreContextModelSnapshot.cs", "C#", 0, 0, 95, 0, 0, 0, 0, 0, 0, 0, 0, 1, 32, 128
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/StoreContext.cs", "C#", 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 11
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Entities/Basket.cs", "C#", 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 50
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Entities/BasketItem.cs", "C#", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 14
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Entities/Product.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 16
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Extensions/BasketExtensions.cs", "C#", 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 29
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Extensions/HttpExtensions.cs", "C#", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 17
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Extensions/ProductExtensions.cs", "C#", 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 50
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Middleware/ExceptionMiddleware.cs", "C#", 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 42
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Program.cs", "C#", 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 30
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Properties/launchSettings.json", "JSON", 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/RequestHelpers/PagedList.cs", "C#", 0, 0, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 26
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/RequestHelpers/PaginationMetadata.cs", "C#", 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 12
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/RequestHelpers/PaginationParams.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 16
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/RequestHelpers/ProductParams.cs", "C#", 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 12
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/WeatherForecast.cs", "C#", 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 13
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/appsettings.Development.json", "JSON", 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 12
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/appsettings.json", "JSON", 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 10
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/store.db", "Database", 0, 0, 0, 0, 0, 58, 0, 0, 0, 0, 0, 0, 1, 59
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/README.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 11, 51
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/eslint.config.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 2, 29
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/index.html", "HTML", 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/package-lock.json", "JSON", 4392, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4393
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/package.json", "JSON", 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 41
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/public/vite.svg", "XML", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/api/baseApi.ts", "TypeScript", 0, 0, 0, 0, 46, 0, 0, 0, 0, 0, 0, 0, 7, 53
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/errors/NotFound.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 1, 26
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/errors/ServerError.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 2, 20
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/layout/App.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 43, 0, 0, 0, 0, 0, 7, 50
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/layout/NavBar.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 81, 0, 0, 0, 0, 0, 8, 89
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/layout/styles.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/layout/uiSlice.ts", "TypeScript", 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 3, 28
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/router/Routes.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 1, 30
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/shared/components/AppPagination.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 1, 4, 30
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/shared/components/CheckboxButtons.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 34, 0, 0, 0, 0, 0, 6, 40
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/shared/components/OrderSummary.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 87, 0, 0, 0, 0, 2, 9, 98
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/shared/components/RadioButtonGroup.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 2, 29
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/store/store.ts", "TypeScript", 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 3, 31
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/types/basket.ts", "TypeScript", 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 4, 29
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/types/pagination.ts", "TypeScript", 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 6
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/types/product.ts", "TypeScript", 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 10
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/types/productParams.ts", "TypeScript", 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 8
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/assets/react.svg", "XML", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/about/AboutPage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 41, 0, 0, 0, 0, 0, 4, 45
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/about/errorApi.ts", "TypeScript", 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 2, 32
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/basket/BasketItem.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 77, 0, 0, 0, 0, 0, 9, 86
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/basket/BasketPage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 4, 25
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/basket/basketApi.ts", "TypeScript", 0, 0, 0, 0, 69, 0, 0, 0, 0, 0, 0, 0, 5, 74
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/CatalogPage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 4, 42
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/Filters.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 47, 0, 0, 0, 0, 0, 4, 51
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/ProductCard.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 46, 0, 0, 0, 0, 0, 3, 49
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/ProductDetails.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 88, 0, 0, 0, 0, 0, 8, 96
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/Search.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 4, 32
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/catalogApi.ts", "TypeScript", 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 2, 34
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/catalogSlice.ts", "TypeScript", 0, 0, 0, 0, 49, 0, 0, 0, 0, 0, 0, 0, 4, 53
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/checkout/CheckoutPage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 1, 9
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/contact/ContactPage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 1, 21
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/contact/counterSlice.ts", "TypeScript", 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 4, 26
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/home/HomePage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 5
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/lib/util.ts", "TypeScript", 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 2, 23
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/main.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 2, 23
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/vite-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/tsconfig.app.json", "JSON", 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 25
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/tsconfig.json", "JSON with Comments", 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 1, 8
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/tsconfig.node.json", "JSON", 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 23
+"/Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/vite.config.ts", "TypeScript", 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 1, 2, 12
+"Total", "-", 4504, 13, 1145, 16, 380, 58, 809, 0, 27, 7, 40, 28, 410, 7437

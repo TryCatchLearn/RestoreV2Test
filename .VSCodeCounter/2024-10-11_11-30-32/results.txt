@@ -1,0 +1,150 @@
+Date : 2024-10-11 11:30:32
+Directory : /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore
+Total : 81 files,  6999 codes, 28 comments, 410 blanks, all 7437 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          7 |      4,504 |          4 |         11 |      4,519 |
+| C#                 |         29 |      1,145 |         19 |        255 |      1,419 |
+| TypeScript JSX     |         21 |        809 |          3 |         84 |        896 |
+| TypeScript         |         15 |        380 |          2 |         39 |        421 |
+| Database           |          1 |         58 |          0 |          1 |         59 |
+| Markdown           |          1 |         40 |          0 |         11 |         51 |
+| JavaScript         |          1 |         27 |          0 |          2 |         29 |
+| XML                |          3 |         16 |          0 |          4 |         20 |
+| HTML               |          1 |         13 |          0 |          1 |         14 |
+| JSON with Comments |          1 |          7 |          0 |          1 |          8 |
+| CSS                |          1 |          0 |          0 |          1 |          1 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                        | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                           |         81 |      6,999 |         28 |        410 |      7,437 |
+| API                                                                                                                         |         34 |      1,251 |         19 |        263 |      1,533 |
+| API (Files)                                                                                                                 |          6 |        120 |          2 |         20 |        142 |
+| API/Controllers                                                                                                             |          5 |        172 |          0 |         45 |        217 |
+| API/DTOs                                                                                                                    |          2 |         20 |          0 |          4 |         24 |
+| API/Data                                                                                                                    |          9 |        696 |         16 |        139 |        851 |
+| API/Data (Files)                                                                                                            |          2 |        228 |          0 |         12 |        240 |
+| API/Data/Migrations                                                                                                         |          7 |        468 |         16 |        127 |        611 |
+| API/Entities                                                                                                                |          3 |         63 |          1 |         16 |         80 |
+| API/Extensions                                                                                                              |          3 |         78 |          0 |         18 |         96 |
+| API/Middleware                                                                                                              |          1 |         34 |          0 |          8 |         42 |
+| API/Properties                                                                                                              |          1 |         14 |          0 |          1 |         15 |
+| API/RequestHelpers                                                                                                          |          4 |         54 |          0 |         12 |         66 |
+| client                                                                                                                      |         47 |      5,748 |          9 |        147 |      5,904 |
+| client (Files)                                                                                                              |          9 |      4,566 |          5 |         25 |      4,596 |
+| client/public                                                                                                               |          1 |          1 |          0 |          0 |          1 |
+| client/src                                                                                                                  |         37 |      1,181 |          4 |        122 |      1,307 |
+| client/src (Files)                                                                                                          |          2 |         21 |          1 |          3 |         25 |
+| client/src/app                                                                                                              |         17 |        517 |          3 |         58 |        578 |
+| client/src/app/api                                                                                                          |          1 |         46 |          0 |          7 |         53 |
+| client/src/app/errors                                                                                                       |          2 |         43 |          0 |          3 |         46 |
+| client/src/app/layout                                                                                                       |          4 |        149 |          0 |         19 |        168 |
+| client/src/app/router                                                                                                       |          1 |         29 |          0 |          1 |         30 |
+| client/src/app/shared                                                                                                       |          4 |        173 |          3 |         21 |        197 |
+| client/src/app/shared/components                                                                                            |          4 |        173 |          3 |         21 |        197 |
+| client/src/app/store                                                                                                        |          1 |         28 |          0 |          3 |         31 |
+| client/src/app/types                                                                                                        |          4 |         49 |          0 |          4 |         53 |
+| client/src/assets                                                                                                           |          1 |          1 |          0 |          0 |          1 |
+| client/src/features                                                                                                         |         16 |        621 |          0 |         59 |        680 |
+| client/src/features/about                                                                                                   |          2 |         71 |          0 |          6 |         77 |
+| client/src/features/basket                                                                                                  |          3 |        167 |          0 |         18 |        185 |
+| client/src/features/catalog                                                                                                 |          7 |        328 |          0 |         29 |        357 |
+| client/src/features/checkout                                                                                                |          1 |          8 |          0 |          1 |          9 |
+| client/src/features/contact                                                                                                 |          2 |         42 |          0 |          5 |         47 |
+| client/src/features/home                                                                                                    |          1 |          5 |          0 |          0 |          5 |
+| client/src/lib                                                                                                              |          1 |         21 |          0 |          2 |         23 |
++-----------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                    | language           | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/API.csproj                                                   | XML                |         14 |          0 |          4 |         18 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Controllers/BaseApiController.cs                             | C#                 |         10 |          0 |          2 |         12 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Controllers/BasketController.cs                              | C#                 |         60 |          0 |         21 |         81 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Controllers/BuggyController.cs                               | C#                 |         35 |          0 |          6 |         41 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Controllers/ProductsController.cs                            | C#                 |         40 |          0 |         10 |         50 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Controllers/WeatherForecastController.cs                     | C#                 |         27 |          0 |          6 |         33 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/DTOs/BasketDto.cs                                            | C#                 |          9 |          0 |          3 |         12 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/DTOs/BasketItemDto.cs                                        | C#                 |         11 |          0 |          1 |         12 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/DbInitializer.cs                                        | C#                 |        219 |          0 |         10 |        229 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241009045439_InitialCreate.Designer.cs     | C#                 |         47 |          2 |         13 |         62 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241009045439_InitialCreate.cs              | C#                 |         34 |          3 |          4 |         41 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241010050425_BasketEntityAdded.Designer.cs | C#                 |         93 |          2 |         30 |        125 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241010050425_BasketEntityAdded.cs          | C#                 |         64 |          3 |          8 |         75 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241010052235_BasketCorrections.Designer.cs | C#                 |         97 |          2 |         32 |        131 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/20241010052235_BasketCorrections.cs          | C#                 |         38 |          3 |          8 |         49 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/Migrations/StoreContextModelSnapshot.cs                 | C#                 |         95 |          1 |         32 |        128 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Data/StoreContext.cs                                         | C#                 |          9 |          0 |          2 |         11 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Entities/Basket.cs                                           | C#                 |         40 |          0 |         10 |         50 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Entities/BasketItem.cs                                       | C#                 |         10 |          1 |          3 |         14 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Entities/Product.cs                                          | C#                 |         13 |          0 |          3 |         16 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Extensions/BasketExtensions.cs                               | C#                 |         26 |          0 |          3 |         29 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Extensions/HttpExtensions.cs                                 | C#                 |         14 |          0 |          3 |         17 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Extensions/ProductExtensions.cs                              | C#                 |         38 |          0 |         12 |         50 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Middleware/ExceptionMiddleware.cs                            | C#                 |         34 |          0 |          8 |         42 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Program.cs                                                   | C#                 |         20 |          2 |          8 |         30 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/Properties/launchSettings.json                               | JSON               |         14 |          0 |          1 |         15 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/RequestHelpers/PagedList.cs                                  | C#                 |         23 |          0 |          3 |         26 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/RequestHelpers/PaginationMetadata.cs                         | C#                 |          9 |          0 |          3 |         12 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/RequestHelpers/PaginationParams.cs                           | C#                 |         13 |          0 |          3 |         16 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/RequestHelpers/ProductParams.cs                              | C#                 |          9 |          0 |          3 |         12 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/WeatherForecast.cs                                           | C#                 |          8 |          0 |          5 |         13 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/appsettings.Development.json                                 | JSON               |         11 |          0 |          1 |         12 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/appsettings.json                                             | JSON               |          9 |          0 |          1 |         10 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/API/store.db                                                     | Database           |         58 |          0 |          1 |         59 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/README.md                                                 | Markdown           |         40 |          0 |         11 |         51 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/eslint.config.js                                          | JavaScript         |         27 |          0 |          2 |         29 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/index.html                                                | HTML               |         13 |          0 |          1 |         14 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/package-lock.json                                         | JSON               |      4,392 |          0 |          1 |      4,393 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/package.json                                              | JSON               |         40 |          0 |          1 |         41 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/public/vite.svg                                           | XML                |          1 |          0 |          0 |          1 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/api/baseApi.ts                                    | TypeScript         |         46 |          0 |          7 |         53 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/errors/NotFound.tsx                               | TypeScript JSX     |         25 |          0 |          1 |         26 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/errors/ServerError.tsx                            | TypeScript JSX     |         18 |          0 |          2 |         20 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/layout/App.tsx                                    | TypeScript JSX     |         43 |          0 |          7 |         50 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/layout/NavBar.tsx                                 | TypeScript JSX     |         81 |          0 |          8 |         89 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/layout/styles.css                                 | CSS                |          0 |          0 |          1 |          1 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/layout/uiSlice.ts                                 | TypeScript         |         25 |          0 |          3 |         28 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/router/Routes.tsx                                 | TypeScript JSX     |         29 |          0 |          1 |         30 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/shared/components/AppPagination.tsx               | TypeScript JSX     |         25 |          1 |          4 |         30 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/shared/components/CheckboxButtons.tsx             | TypeScript JSX     |         34 |          0 |          6 |         40 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/shared/components/OrderSummary.tsx                | TypeScript JSX     |         87 |          2 |          9 |         98 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/shared/components/RadioButtonGroup.tsx            | TypeScript JSX     |         27 |          0 |          2 |         29 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/store/store.ts                                    | TypeScript         |         28 |          0 |          3 |         31 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/types/basket.ts                                   | TypeScript         |         25 |          0 |          4 |         29 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/types/pagination.ts                               | TypeScript         |          6 |          0 |          0 |          6 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/types/product.ts                                  | TypeScript         |         10 |          0 |          0 |         10 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/app/types/productParams.ts                            | TypeScript         |          8 |          0 |          0 |          8 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/assets/react.svg                                      | XML                |          1 |          0 |          0 |          1 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/about/AboutPage.tsx                          | TypeScript JSX     |         41 |          0 |          4 |         45 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/about/errorApi.ts                            | TypeScript         |         30 |          0 |          2 |         32 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/basket/BasketItem.tsx                        | TypeScript JSX     |         77 |          0 |          9 |         86 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/basket/BasketPage.tsx                        | TypeScript JSX     |         21 |          0 |          4 |         25 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/basket/basketApi.ts                          | TypeScript         |         69 |          0 |          5 |         74 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/CatalogPage.tsx                      | TypeScript JSX     |         38 |          0 |          4 |         42 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/Filters.tsx                          | TypeScript JSX     |         47 |          0 |          4 |         51 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/ProductCard.tsx                      | TypeScript JSX     |         46 |          0 |          3 |         49 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/ProductDetails.tsx                   | TypeScript JSX     |         88 |          0 |          8 |         96 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/Search.tsx                           | TypeScript JSX     |         28 |          0 |          4 |         32 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/catalogApi.ts                        | TypeScript         |         32 |          0 |          2 |         34 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/catalog/catalogSlice.ts                      | TypeScript         |         49 |          0 |          4 |         53 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/checkout/CheckoutPage.tsx                    | TypeScript JSX     |          8 |          0 |          1 |          9 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/contact/ContactPage.tsx                      | TypeScript JSX     |         20 |          0 |          1 |         21 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/contact/counterSlice.ts                      | TypeScript         |         22 |          0 |          4 |         26 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/features/home/HomePage.tsx                            | TypeScript JSX     |          5 |          0 |          0 |          5 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/lib/util.ts                                           | TypeScript         |         21 |          0 |          2 |         23 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/main.tsx                                              | TypeScript JSX     |         21 |          0 |          2 |         23 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/src/vite-env.d.ts                                         | TypeScript         |          0 |          1 |          1 |          2 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/tsconfig.app.json                                         | JSON               |         20 |          2 |          3 |         25 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/tsconfig.json                                             | JSON with Comments |          7 |          0 |          1 |          8 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/tsconfig.node.json                                        | JSON               |         18 |          2 |          3 |         23 |
+| /Users/neilc/Projects/RestoreCourse/2024/practice2/Restore/client/vite.config.ts                                            | TypeScript         |          9 |          1 |          2 |         12 |
+| Total                                                                                                                       |                    |      6,999 |         28 |        410 |      7,437 |
++-----------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

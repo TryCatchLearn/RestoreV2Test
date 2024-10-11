@@ -3,6 +3,8 @@ import { AppBar, Badge, Box, IconButton, LinearProgress, List, ListItem, Toolbar
 import { Link, NavLink } from "react-router-dom";
 import { useAppSelector } from "../store/store";
 import { useFetchBasketQuery } from "../../features/basket/basketApi";
+import { useUserInfoQuery } from "../../features/account/accountApi";
+import UserMenu from "./UserMenu";
 
 const midLinks = [
     { title: 'catalog', path: '/catalog' },
@@ -35,6 +37,7 @@ type Props = {
 export default function NavBar({ toggleDarkMode, darkMode }: Props) {
     const { isLoading } = useAppSelector(state => state.ui);
     const { data: basket } = useFetchBasketQuery();
+    const { data: user } = useUserInfoQuery();
 
     const itemCount = basket?.items.reduce((sum, item) => sum + item.quantity, 0) || 0;
 
@@ -66,18 +69,23 @@ export default function NavBar({ toggleDarkMode, darkMode }: Props) {
                             <ShoppingCart />
                         </Badge>
                     </IconButton>
-                    <List sx={{ display: 'flex' }}>
-                        {rightLinks.map(({ title, path }) => (
-                            <ListItem
-                                component={NavLink}
-                                to={path}
-                                key={path}
-                                sx={navStyles}
-                            >
-                                {title.toUpperCase()}
-                            </ListItem>
-                        ))}
-                    </List>
+                    {user ? (
+                        <UserMenu user={user} />
+                    ) : (
+                        <List sx={{ display: 'flex' }}>
+                            {rightLinks.map(({ title, path }) => (
+                                <ListItem
+                                    component={NavLink}
+                                    to={path}
+                                    key={path}
+                                    sx={navStyles}
+                                >
+                                    {title.toUpperCase()}
+                                </ListItem>
+                            ))}
+                        </List>
+                    )}
+
                 </Box>
             </Toolbar>
             {isLoading &&
