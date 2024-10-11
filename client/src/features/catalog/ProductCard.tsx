@@ -16,11 +16,11 @@ export default function ProductCard({ product }: Props) {
         <Card
             elevation={3}
             sx={{
-                width: 280,
                 borderRadius: 2,
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'space-between'
+                justifyContent: 'space-between',
+                height: '100%'
             }}>
             <CardMedia
                 sx={{ height: 240, backgroundSize: 'cover' }}
