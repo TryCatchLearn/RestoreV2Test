@@ -1,6 +1,6 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { baseQueryWithErrorHandling } from "../../app/api/baseApi";
-import { User } from "../../app/types/user";
+import { Address, User } from "../../app/types/user";
 import { LoginSchema } from "../../lib/schemas/loginSchema";
 import { router } from "../../app/router/Routes";
 import { toast } from "react-toastify";
@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 export const accountApi = createApi({
     reducerPath: 'accountApi',
     baseQuery: baseQueryWithErrorHandling,
-    tagTypes: ['UserInfo'],
+    tagTypes: ['UserInfo', 'UserAddress'],
     endpoints: (builder) => ({
         login: builder.mutation<void, LoginSchema>({
             query: (creds) => {
@@ -63,9 +63,36 @@ export const accountApi = createApi({
                 dispatch(accountApi.util.invalidateTags(['UserInfo']));
                 router.navigate('/');
             }
+        }),
+        fetchUserAddress: builder.query<Address, void>({
+            query: () => ({
+                url: 'account/address'
+            }),
+            providesTags: ['UserAddress']
+        }),
+        updateUserAddress: builder.mutation<Address, Address>({
+            query: (address) => ({
+                url: 'account/address',
+                method: 'POST',
+                body: address
+            }),
+            // onQueryStarted: async (address, {dispatch, queryFulfilled}) => {
+            //     const patchResult = dispatch(
+            //         accountApi.util.updateQueryData('fetchUserAddress', undefined, (draft) => {
+            //             Object.assign(draft, {...address})
+            //         }
+            //     ));
+
+            //     try {
+            //         await queryFulfilled;
+            //     } catch (error) {
+            //         patchResult.undo();
+            //         console.log(error);
+            //     }
+            // }
         })
     })
 })
 
 export const {useLoginMutation, useRegisterMutation, useLogoutMutation, useUserInfoQuery, 
-    useLazyUserInfoQuery} = accountApi;
+    useLazyUserInfoQuery, useFetchUserAddressQuery, useUpdateUserAddressMutation} = accountApi;

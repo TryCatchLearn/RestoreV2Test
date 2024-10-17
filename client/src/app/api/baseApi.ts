@@ -8,7 +8,7 @@ type ErrorResponse = | string | { title: string } | { errors: string[] }
 const sleep = () => new Promise(resolve => setTimeout(resolve, 500));
 
 const customBaseQuery = fetchBaseQuery({
-    baseUrl: 'https://localhost:5001/api/',
+    baseUrl: import.meta.env.VITE_API_URL,
     credentials: 'include'
 });
 

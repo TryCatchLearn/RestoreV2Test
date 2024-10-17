@@ -2,6 +2,7 @@ import { createApi } from "@reduxjs/toolkit/query/react";
 import { baseQueryWithErrorHandling } from "../../app/api/baseApi";
 import { Basket, BasketItem } from "../../app/types/basket";
 import { Product } from "../../app/types/product";
+import Cookies from 'js-cookie';
 
 function isBasketItem(product: Product | BasketItem): product is BasketItem {
     return (product as BasketItem).quantity !== undefined;
@@ -27,13 +28,14 @@ export const basketApi = createApi({
             onQueryStarted: async ({ product, quantity }, { dispatch, queryFulfilled }) => {
                 const patchResult = dispatch(
                     basketApi.util.updateQueryData('fetchBasket', undefined, (draft) => {
+                        draft.items = draft.items ?? [];
                         const productId = isBasketItem(product) ? product.productId : product.id;
                         const existingItem = draft.items.find(item => item.productId === productId);
                         if (existingItem) existingItem.quantity += quantity;
                         else draft.items.push(isBasketItem(product) ? product : new BasketItem(product, quantity))
                     })
                 )
-
+                // TODO: This does not work properly when creating a new basket.  Only after creation.  
                 try {
                     await queryFulfilled;
                 } catch (error) {
@@ -67,8 +69,20 @@ export const basketApi = createApi({
                     console.log(error);
                 }
             }
+        }),
+        clearBasket: builder.mutation<void, void>({
+            queryFn: () => ({data: undefined}),
+            onQueryStarted: async (_, {dispatch}) => {
+                dispatch(
+                    basketApi.util.updateQueryData('fetchBasket', undefined, (draft) => {
+                        draft.items = [];
+                    }
+                ));
+                Cookies.remove('basketId');
+            }
         })
     })
 });
 
-export const { useFetchBasketQuery, useAddBasketItemMutation, useRemoveBasketItemMutation } = basketApi;
+export const { useFetchBasketQuery, useAddBasketItemMutation, useRemoveBasketItemMutation, 
+    useClearBasketMutation } = basketApi;
