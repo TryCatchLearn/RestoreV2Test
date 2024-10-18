@@ -1,4 +1,4 @@
-import { BasketItem } from "../../app/types/basket";
+import { BasketItem } from "../types/basket";
 import { useClearBasketMutation, useFetchBasketQuery } from "../../features/basket/basketApi";
 
 export const useBasket = () => {

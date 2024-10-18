@@ -9,6 +9,6 @@ public class CreateOrderDto
     [Required]
     public ShippingAddress ShippingAddress {get; set;} = null!;
 
-    // TODO: Make required when payments set up.
-    public PaymentSummary? PaymentSummary { get; set; } 
+    [Required]
+    public PaymentSummary PaymentSummary { get; set; } = null!;
 }

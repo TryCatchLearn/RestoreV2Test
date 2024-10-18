@@ -1,6 +1,6 @@
 import { Remove, Add, Close } from "@mui/icons-material";
 import { Paper, Box, Typography, Grid2, Button } from "@mui/material";
-import { BasketItem } from "../../app/types/basket";
+import { BasketItem } from "../../lib/types/basket";
 import { useAddBasketItemMutation, useRemoveBasketItemMutation } from "./basketApi";
 import { currencyFormat } from "../../lib/util";
 

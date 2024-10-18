@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { User } from "../../app/types/user";
+import { User } from "../../lib/types/user";
 import { accountApi } from "./accountApi";
 
 export const accountSlice = createSlice({

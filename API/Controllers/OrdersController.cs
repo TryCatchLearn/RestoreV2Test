@@ -14,10 +14,10 @@ namespace API.Controllers;
 public class OrdersController(StoreContext context) : BaseApiController
 {
     [HttpGet]
-    public async Task<ActionResult<List<Order>>> GetOrders()
+    public async Task<ActionResult<List<OrderDto>>> GetOrders()
     {
         var orders = await context.Orders
-            .Include(x => x.OrderItems)
+            .ProjectToDto()
             .Where(x => x.BuyerEmail == User.GetUsername())
             .ToListAsync();
 
@@ -25,9 +25,10 @@ public class OrdersController(StoreContext context) : BaseApiController
     }
 
     [HttpGet("{id:int}")]
-    public async Task<ActionResult<Order>> GetOrderDetails(int id)
+    public async Task<ActionResult<OrderDto>> GetOrderDetails(int id)
     {
         var order = await context.Orders
+            .ProjectToDto()
             .Where(x => x.BuyerEmail == User.GetUsername() && id == x.Id)
             .FirstOrDefaultAsync();
 
@@ -48,24 +49,35 @@ public class OrdersController(StoreContext context) : BaseApiController
 
         var deliveryFee = CalculateDeliveryFee(subtotal);
 
-        var order = new Order
+        var order = await context.Orders
+            .Include(x => x.OrderItems)
+            .FirstOrDefaultAsync(x => x.PaymentIntentId == basket.PaymentIntentId);
+
+        if (order == null)
         {
-            OrderItems = items,
-            BuyerEmail = User.GetUsername(),
-            ShippingAddress = orderDto.ShippingAddress,
-            DeliveryFee = deliveryFee,
-            Subtotal = subtotal,
-            PaymentSummary = orderDto.PaymentSummary,
-            PaymentIntentId = basket.PaymentIntentId
-        };
+            order = new Order
+            {
+                OrderItems = items,
+                BuyerEmail = User.GetUsername(),
+                ShippingAddress = orderDto.ShippingAddress,
+                DeliveryFee = deliveryFee,
+                Subtotal = subtotal,
+                PaymentSummary = orderDto.PaymentSummary,
+                PaymentIntentId = basket.PaymentIntentId
+            };
 
-        context.Orders.Add(order);
-
+            context.Orders.Add(order);
+        }
+        else
+        {
+            order.OrderItems = items;
+        }
+        
         var result = await context.SaveChangesAsync() > 0;
 
         if (!result) return BadRequest("Problem creating order");
 
-        return CreatedAtAction(nameof(GetOrderDetails), new { id = order.Id }, order);
+        return CreatedAtAction(nameof(GetOrderDetails), new { id = order.Id }, order.ToDto());
     }
 
     private static long CalculateDeliveryFee(long subtotal)

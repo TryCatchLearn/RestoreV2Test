@@ -1,20 +1,22 @@
 import { LoadingButton } from "@mui/lab";
-import { Box, Button, Checkbox, FormControlLabel, Paper, Step, StepLabel, Stepper } from "@mui/material";
-import { AddressElement, PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { Box, Button, Paper, Step, StepLabel, Stepper } from "@mui/material";
+import { PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useState } from "react";
 import Review from "./Review";
 import { useFetchUserAddressQuery, useUpdateUserAddressMutation } from "../account/accountApi";
-import { Address } from "../../app/types/user";
 import { ConfirmationToken, StripeAddressElementChangeEvent, StripePaymentElementChangeEvent } from "@stripe/stripe-js";
 import { currencyFormat } from "../../lib/util";
 import { useBasket } from "../../lib/hooks/useBasket";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { useCreateOrderMutation } from "../orders/orderApi";
+import CheckoutAddress from "./CheckoutAddress";
 
 const steps = ['Address', 'Payment', 'Review'];
 
 export default function CheckoutStepper() {
-    const { data: { name, ...restAddress } = {} as Address} = useFetchUserAddressQuery();
+    const { data: address} = useFetchUserAddressQuery();
+    const [createOrder] = useCreateOrderMutation();
     const { subtotal, deliveryFee, basket, clearBasket } = useBasket();
     const [updateAddress] = useUpdateUserAddressMutation();
     const [activeStep, setActiveStep] = useState(0);
@@ -74,6 +76,11 @@ export default function CheckoutStepper() {
         try {
             if (!confirmationToken || !basket?.clientSecret) throw new Error('Unable to process payment');
 
+            const orderModel = await createOrderModel();
+            const orderResult = await createOrder(orderModel);
+
+            if (!orderResult) throw new Error('Order creation failed or out of stock');
+
             const paymentResult = await stripe?.confirmPayment({
                 clientSecret: basket.clientSecret,
                 redirect: 'if_required',
@@ -83,7 +90,7 @@ export default function CheckoutStepper() {
             });
 
             if (paymentResult?.paymentIntent?.status === 'succeeded') {
-                navigate('/checkout/success');
+                navigate('/checkout/success', {state: orderResult});
                 await clearBasket();
             } else if (paymentResult?.error) {
                 throw new Error(paymentResult.error.message);
@@ -97,6 +104,15 @@ export default function CheckoutStepper() {
         } finally {
             setSubmitting(false);
         }
+    }
+
+    const createOrderModel = async () => {
+        const shippingAddress = await getStripeAddress();
+        const paymentSummary = confirmationToken?.payment_method_preview.card;
+
+        if (!shippingAddress || !paymentSummary) throw new Error('Problem creating order');
+
+        return {shippingAddress, paymentSummary}
     }
 
     return (
@@ -113,23 +129,12 @@ export default function CheckoutStepper() {
 
             <Box sx={{ mt: 2 }}>
                 <Box sx={{ display: activeStep === 0 ? 'block' : 'none' }}>
-                    <AddressElement
-                        options={{
-                            mode: 'shipping',
-                            defaultValues: {
-                                address: restAddress,
-                                name: name
-                            }
-                        }}
-                        onChange={handleAddressChange}
+                    <CheckoutAddress 
+                        address={address} 
+                        onChange={handleAddressChange} 
+                        checked={saveAddressChecked} 
+                        onCheckChange={setSaveAddressChecked}
                     />
-                    <FormControlLabel
-                        sx={{ display: 'flex', justifyContent: 'end' }}
-                        control={<Checkbox 
-                            checked={saveAddressChecked}
-                            onChange={e => setSaveAddressChecked(e.target.checked)}
-                        />}
-                        label="Save as default address" />
                 </Box>
                 <Box sx={{ display: activeStep === 1 ? 'block' : 'none' }}>
                     <PaymentElement 

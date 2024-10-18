@@ -1,6 +1,6 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { baseQueryWithErrorHandling } from "../../app/api/baseApi";
-import { Address, User } from "../../app/types/user";
+import { Address, User } from "../../lib/types/user";
 import { LoginSchema } from "../../lib/schemas/loginSchema";
 import { router } from "../../app/router/Routes";
 import { toast } from "react-toastify";

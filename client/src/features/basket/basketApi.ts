@@ -1,7 +1,7 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { baseQueryWithErrorHandling } from "../../app/api/baseApi";
-import { Basket, BasketItem } from "../../app/types/basket";
-import { Product } from "../../app/types/product";
+import { Basket, BasketItem } from "../../lib/types/basket";
+import { Product } from "../../lib/types/product";
 import Cookies from 'js-cookie';
 
 function isBasketItem(product: Product | BasketItem): product is BasketItem {
@@ -26,18 +26,24 @@ export const basketApi = createApi({
                 }
             },
             onQueryStarted: async ({ product, quantity }, { dispatch, queryFulfilled }) => {
+                let isNewBasket = false;
                 const patchResult = dispatch(
                     basketApi.util.updateQueryData('fetchBasket', undefined, (draft) => {
-                        draft.items = draft.items ?? [];
                         const productId = isBasketItem(product) ? product.productId : product.id;
-                        const existingItem = draft.items.find(item => item.productId === productId);
-                        if (existingItem) existingItem.quantity += quantity;
-                        else draft.items.push(isBasketItem(product) ? product : new BasketItem(product, quantity))
+
+                        if (!draft?.basketId) isNewBasket = true;
+
+                        if (!isNewBasket) {
+                            const existingItem = draft?.items?.find(item => item.productId === productId);
+                            if (existingItem) existingItem.quantity += quantity;
+                            else draft.items.push(isBasketItem(product) ? product : new BasketItem(product, quantity))
+                        }
                     })
                 )
-                // TODO: This does not work properly when creating a new basket.  Only after creation.  
                 try {
                     await queryFulfilled;
+
+                    if (isNewBasket) dispatch(basketApi.util.invalidateTags(['Basket']))
                 } catch (error) {
                     console.log(error);
                     patchResult.undo();
@@ -76,6 +82,7 @@ export const basketApi = createApi({
                 dispatch(
                     basketApi.util.updateQueryData('fetchBasket', undefined, (draft) => {
                         draft.items = [];
+                        draft.basketId = '';
                     }
                 ));
                 Cookies.remove('basketId');

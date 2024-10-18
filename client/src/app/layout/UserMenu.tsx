@@ -2,7 +2,7 @@ import { Person, Inventory, Logout, History } from "@mui/icons-material";
 import { Button, Menu, MenuItem, ListItemIcon, ListItemText, Divider } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { User } from "../types/user";
+import { User } from "../../lib/types/user";
 import { useLogoutMutation } from "../../features/account/accountApi";
 
 type Props = {

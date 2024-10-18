@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ProductParams } from "../../app/types/productParams";
-import { Pagination } from "../../app/types/pagination";
+import { ProductParams } from "../../lib/types/productParams";
+import { Pagination } from "../../lib/types/pagination";
 
 type CatalogState = {
     pagination?: Pagination

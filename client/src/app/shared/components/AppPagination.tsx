@@ -1,5 +1,5 @@
 import { Box, Typography, Pagination } from "@mui/material";
-import { Pagination as PaginationType } from "../../types/pagination";
+import { Pagination as PaginationType } from "../../../lib/types/pagination";
 
 type Props = {
     metadata: PaginationType;
