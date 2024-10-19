@@ -22,7 +22,8 @@ export default function CheckoutAddress({address, onChange, checked, onCheckChan
                             line2: address?.line2,
                             city: address?.city,
                             country: address.country,
-                            postal_code: address.postal_code
+                            postal_code: address.postal_code,
+                            state: address.state
                         },
                         name: address?.name
                     } : undefined

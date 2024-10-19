@@ -5,7 +5,7 @@ import { router } from "../router/Routes";
 
 type ErrorResponse = | string | { title: string } | { errors: string[] }
 
-const sleep = () => new Promise(resolve => setTimeout(resolve, 500));
+const sleep = () => new Promise(resolve => setTimeout(resolve, 300));
 
 const customBaseQuery = fetchBaseQuery({
     baseUrl: import.meta.env.VITE_API_URL,
@@ -14,7 +14,7 @@ const customBaseQuery = fetchBaseQuery({
 
 export const baseQueryWithErrorHandling = async (args: string | FetchArgs, api: BaseQueryApi, extraOptions: object) => {
     api.dispatch(startLoading());
-    await sleep();
+    if (import.meta.env.DEV) await sleep();
     const result = await customBaseQuery(args, api, extraOptions);
     api.dispatch(stopLoading());
     if (result.error) {

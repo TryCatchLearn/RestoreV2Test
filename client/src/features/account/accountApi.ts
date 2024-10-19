@@ -22,7 +22,7 @@ export const accountApi = createApi({
               try {
                 await queryFulfilled;
                 // dispatch(accountApi.endpoints.userInfo.initiate());
-                dispatch(accountApi.util.invalidateTags(['UserInfo']));
+                dispatch(accountApi.util.invalidateTags(['UserInfo', 'UserAddress']));
               } catch (error) {
                 console.log(error);
               }  

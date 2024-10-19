@@ -70,7 +70,7 @@ export default function CheckoutSuccess() {
                 </Paper>
 
                 <Box display="flex" justifyContent="flex-start" gap={2}>
-                    <Button variant="contained" color="primary" href={`/orders/1`}>
+                    <Button variant="contained" color="primary" href={`/orders/${order.id}`}>
                         View your order
                     </Button>
                     <Button component={Link} to='/catalog' variant="outlined" color="primary">

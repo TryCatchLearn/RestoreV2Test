@@ -1,5 +1,5 @@
 import { LoadingButton } from "@mui/lab";
-import { Box, Button, Paper, Step, StepLabel, Stepper } from "@mui/material";
+import { Box, Button, Paper, Step, StepLabel, Stepper, Typography } from "@mui/material";
 import { PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useState } from "react";
 import Review from "./Review";
@@ -15,7 +15,7 @@ import CheckoutAddress from "./CheckoutAddress";
 const steps = ['Address', 'Payment', 'Review'];
 
 export default function CheckoutStepper() {
-    const { data: address} = useFetchUserAddressQuery();
+    const { data: address, isLoading} = useFetchUserAddressQuery();
     const [createOrder] = useCreateOrderMutation();
     const { subtotal, deliveryFee, basket, clearBasket } = useBasket();
     const [updateAddress] = useUpdateUserAddressMutation();
@@ -79,6 +79,8 @@ export default function CheckoutStepper() {
             const orderModel = await createOrderModel();
             const orderResult = await createOrder(orderModel);
 
+            console.log(orderResult);
+
             if (!orderResult) throw new Error('Order creation failed or out of stock');
 
             const paymentResult = await stripe?.confirmPayment({
@@ -114,6 +116,8 @@ export default function CheckoutStepper() {
 
         return {shippingAddress, paymentSummary}
     }
+
+    if (isLoading) return <Typography>Loading checkout...</Typography>
 
     return (
         <Paper sx={{ p: 3, borderRadius: 3 }}>

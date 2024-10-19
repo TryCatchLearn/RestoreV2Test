@@ -1,4 +1,4 @@
-import { Card, Grid2, Typography, Button, Divider, Grid, TableContainer, Paper, Table, TableBody, TableRow, TableCell } from "@mui/material";
+import { Card, Grid2, Typography, Button, Divider, TableContainer, Paper, Table, TableBody, TableRow, TableCell } from "@mui/material";
 import { format } from "date-fns";
 import { useParams, Link } from "react-router-dom";
 import { currencyFormat } from "../../lib/util";
@@ -38,9 +38,9 @@ export default function OrderDetailed() {
                     </Button>
                 </Grid2>
 
-                <Divider style={{ margin: '2rem 0' }} />
+                <Divider sx={{my:2}} />
 
-                <Grid2 container spacing={4}>
+
                     <Grid2 size={12}>
                         <Typography variant="h6" fontWeight="600">Billing and delivery information</Typography>
                         <dl>
@@ -53,7 +53,9 @@ export default function OrderDetailed() {
                         </dl>
                     </Grid2>
 
-                    <Grid item xs={12} md={6}>
+                    <Divider sx={{my:2}} />
+
+                    <Grid2 size={12}>
                         <Typography variant="h6" fontWeight="600">Order details</Typography>
                         <dl>
                             <dt><Typography variant="subtitle1" fontWeight="500">Email address</Typography></dt>
@@ -67,10 +69,10 @@ export default function OrderDetailed() {
                             <dt><Typography variant="subtitle1" fontWeight="500">Order date</Typography></dt>
                             <dd><Typography variant="body2" fontWeight="300">{format(order.orderDate, 'dd MMM yyyy')}</Typography></dd>
                         </dl>
-                    </Grid>
-                </Grid2>
+                    </Grid2>
 
-                <Divider style={{ margin: '2rem 0' }} />
+
+                <Divider />
 
                 <TableContainer component={Paper}>
                     <Table>
@@ -91,7 +93,6 @@ export default function OrderDetailed() {
                     </Table>
                 </TableContainer>
 
-                <Divider style={{ margin: '2rem 0' }} />
 
                 <div style={{ padding: '1rem' }}>
                     <Typography variant="h6" fontWeight="600">Order summary</Typography>
@@ -109,8 +110,6 @@ export default function OrderDetailed() {
                             <Typography>{currencyFormat(order.deliveryFee)}</Typography>
                         </dl>
                     </div>
-
-                    <Divider />
 
                     <dl style={{ display: 'flex', justifyContent: 'space-between', margin: '0.5rem 0', paddingTop: '1rem' }}>
                         <Typography variant="body1" fontWeight="500">Total</Typography>
