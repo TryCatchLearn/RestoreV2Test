@@ -21,11 +21,11 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install deps and build angular app
+      - name: Install deps and build client app
         run: |
           cd client
           npm install
-          ng build
+          npm run build
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
