@@ -12,6 +12,7 @@ public class StoreContext(DbContextOptions options) : IdentityDbContext<User>(op
     public DbSet<Product> Products { get; set; }
     public DbSet<Basket> Baskets { get; set; }
     public DbSet<Order> Orders { get; set; }
+    public DbSet<Photo> Photos { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

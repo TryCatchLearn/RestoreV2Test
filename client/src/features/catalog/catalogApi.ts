@@ -8,6 +8,7 @@ import { Pagination } from "../../lib/types/pagination";
 export const catalogApi = createApi({
     reducerPath: 'catalogApi',
     baseQuery: baseQueryWithErrorHandling,
+    tagTypes: ['Product'],
     endpoints: (builder) => ({
         fetchProducts: builder.query<{ items: Product[], pagination: Pagination }, ProductParams>({
             query: (productParams) => {
@@ -20,7 +21,8 @@ export const catalogApi = createApi({
                 const paginationHeader = meta?.response?.headers?.get('Pagination');
                 const pagination = paginationHeader ? JSON.parse(paginationHeader) : null;
                 return { items, pagination };
-            }
+            },
+            providesTags: ['Product']
         }),
         fetchProductDetails: builder.query<Product, number>({
             query: (productId) => `products/${productId}`

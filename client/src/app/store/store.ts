@@ -10,6 +10,7 @@ import { accountApi } from "../../features/account/accountApi";
 import { accountSlice } from "../../features/account/accountSlice";
 import { checkoutApi } from "../../features/checkout/checkoutApi";
 import { orderApi } from "../../features/orders/orderApi";
+import { adminApi } from "../../features/admin/adminApi";
 
 export const store = configureStore({
     reducer: {
@@ -19,6 +20,7 @@ export const store = configureStore({
         [accountApi.reducerPath]: accountApi.reducer,
         [checkoutApi.reducerPath]: checkoutApi.reducer,
         [orderApi.reducerPath]: orderApi.reducer,
+        [adminApi.reducerPath]: adminApi.reducer,
         account: accountSlice.reducer,
         counter: counterSlice.reducer,
         ui: uiSlice.reducer,
@@ -31,7 +33,8 @@ export const store = configureStore({
             basketApi.middleware,
             accountApi.middleware,
             checkoutApi.middleware,
-            orderApi.middleware
+            orderApi.middleware,
+            adminApi.middleware
         )
 });
 
